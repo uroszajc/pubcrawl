@@ -1,0 +1,120 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Perth pub crawl routes and bar directory — find the best bars, plan your route, start your night." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | PubCrawl Perth</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">🍺 PubCrawl Perth</a>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="/routes">Crawl Routes</a></li>
+      <li><a href="/bars">Bar Directory</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <main><slot /></main>
+
+  <footer>
+    <p>© 2026 PubCrawl Perth · Drink responsibly · 18+ only</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav-links')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #0a0a12;
+    --surface: #12121f;
+    --card: #1a1a2e;
+    --neon-pink: #ff2d78;
+    --neon-cyan: #00f5d4;
+    --neon-yellow: #ffe66d;
+    --text: #e8e8f0;
+    --text-dim: #8888a0;
+    --border: rgba(255,255,255,0.07);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  h1,h2,h3 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.06em; text-transform: uppercase; }
+  a { color: var(--neon-cyan); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--neon-pink); }
+
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--neon-pink); letter-spacing: 0.1em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
+  .nav-links a:hover { color: var(--neon-cyan); }
+  .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+  main { min-height: 80vh; }
+
+  footer { background: var(--surface); text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.82rem; border-top: 1px solid var(--border); }
+
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--surface); padding: 1rem; gap: 0.8rem; }
+    .nav-links.open { display: flex; }
+  }
+
+  .btn { display: inline-block; padding: 0.75rem 1.8rem; background: var(--neon-pink); color: white; border-radius: 4px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.88rem; transition: background 0.2s, transform 0.2s; }
+  .btn:hover { background: #ff5c94; color: white; transform: translateY(-1px); }
+  .btn-outline { background: transparent; border: 2px solid var(--neon-cyan); color: var(--neon-cyan); }
+  .btn-outline:hover { background: var(--neon-cyan); color: var(--bg); }
+
+  .tag { display: inline-block; padding: 0.25rem 0.7rem; border-radius: 3px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .tag-beer { background: rgba(255,230,109,0.15); color: var(--neon-yellow); border: 1px solid rgba(255,230,109,0.3); }
+  .tag-cocktail { background: rgba(255,45,120,0.15); color: var(--neon-pink); border: 1px solid rgba(255,45,120,0.3); }
+  .tag-wine { background: rgba(200,100,200,0.15); color: #d080ff; border: 1px solid rgba(200,100,200,0.3); }
+  .tag-rooftop { background: rgba(0,245,212,0.15); color: var(--neon-cyan); border: 1px solid rgba(0,245,212,0.3); }
+  .tag-free-entry { background: rgba(100,255,150,0.15); color: #80ffaa; border: 1px solid rgba(100,255,150,0.3); }
+  .tag-live { background: rgba(255,165,0,0.15); color: #ffa500; border: 1px solid rgba(255,165,0,0.3); }
+</style>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #0a0a12 0%, #1a0a20 50%, #0a0a12 100%);
+    padding: 6rem 2rem 4rem; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 60%, rgba(255,45,120,0.15) 0%, transparent 50%);
+  }
+  .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+  .tagline { color: var(--neon-cyan); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+  h1 { font-size: clamp(3rem, 10vw, 7rem); line-height: 0.95; color: white; margin-bottom: 1.5rem; text-shadow: 0 0 40px rgba(255,45,120,0.4); }
+  .sub { font-size: 1rem; opacity: 0.65; margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>

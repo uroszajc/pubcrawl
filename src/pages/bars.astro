@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Bar Directory" description="Browse all bars in Perth — craft beer, cocktail lounges, rooftop bars, live music venues and more.">
+  <section class="page-header">
+    <h1>Bar Directory</h1>
+    <p>Every good spot we've found — searchable by area or vibe.</p>
+  </section>
+
+  <section class="filters">
+    <div class="container">
+      <div class="filter-tags">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="craft-beer">🍺 Craft Beer</button>
+        <button class="filter" data-filter="cocktails">🍸 Cocktails</button>
+        <button class="filter" data-filter="rooftop">🌇 Rooftop</button>
+        <button class="filter" data-filter="live-music">🎸 Live Music</button>
+        <button class="filter" data-filter="free-entry">🎟️ Free Entry</button>
+        <button class="filter" data-filter="wine">🍷 Wine</button>
+      </div>
+      <div class="filter-tags areas">
+        <button class="filter" data-filter="northbridge">Northbridge</button>
+        <button class="filter" data-filter="fremantle">Fremantle</button>
+        <button class="filter" data-filter="subiaco">Subiaco</button>
+        <button class="filter" data-filter="mounts-bay">Mounts Bay</button>
+        <button class="filter" data-filter="leederville">Leederville</button>
+        <button class="filter" data-filter="highgate">Highgate</button>
+        <button class="filter" data-filter="east-perth">East Perth</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="bars-section">
+    <div class="container">
+      <div class="bars-grid">
+
+        <div class="bar-item" data-tags="craft-beer free-entry" data-area="highgate">
+          <div class="bar-header"><h3>Aviation Brewery</h3><span class="bar-area">Highgate</span></div>
+          <p>Craft beers and sourdough pizzas in a converted hangar. Dog-friendly. Best IPA in Perth according to locals.</p>
+          <p class="bar-address">📍 52 axby Pl, Highgate</p>
+          <div class="bar-tags"><span class="tag tag-beer">Craft Beer</span><span class="tag tag-free-entry">Free Entry</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="rooftop cocktails" data-area="east-perth">
+          <div class="bar-header"><h3>The Vue</h3><span class="bar-area">East Perth</span></div>
+          <p>Rooftop bar with sweeping city skyline views. Try the Espresso Martini or the Vue Mule. Heated for winter.</p>
+          <p class="bar-address">📍 41 East Perth Esplanade, East Perth</p>
+          <div class="bar-tags"><span class="tag tag-rooftop">Rooftop</span><span class="tag tag-cocktail">Cocktails</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="live-music free-entry" data-area="northbridge">
+          <div class="bar-header"><h3>The Gramercy</h3><span class="bar-area">Northbridge</span></div>
+          <p>Live music every night. Jazz on Wednesdays, indie bands on weekends. Free entry before 9pm.</p>
+          <p class="bar-address">📍 206 William St, Northbridge</p>
+          <div class="bar-tags"><span class="tag tag-live">Live Music</span><span class="tag tag-free-entry">Free Entry</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="leederville">
+          <div class="bar-header"><h3>Last Joint</h3><span class="bar-area">Leederville</span></div>
+          <p>20 rotating taps, no fillers — everything on tap is worth drinking. Good pub grub, always solid.</p>
+          <p class="bar-address">📍 1855 Lake Mong, Leederville</p>
+          <div class="bar-tags"><span class="tag tag-beer">20 Taps</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="fremantle">
+          <div class="bar-header"><h3>Little Creatures</h3><span class="bar-area">Fremantle</span></div>
+          <p>Perth institution. Massive warehouse space, rotating taps, excellent food. Gets packed on weekends.</p>
+          <p class="bar-address">📍 9 Mews Rd, Fremantle</p>
+          <div class="bar-tags"><span class="tag tag-beer">Craft Beer</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="fremantle">
+          <div class="bar-header"><h3>Beermotion</h3><span class="bar-area">Fremantle</span></div>
+          <p>Specialty craft bottle shop and bar. Taps rotate daily. Great for cans to go or settling in for a session.</p>
+          <p class="bar-address">📍 42 Pakenham St, Fremantle</p>
+          <div class="bar-tags"><span class="tag tag-beer">Craft Beer</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer rooftop" data-area="fremantle">
+          <div class="bar-header"><h3>The Dock</h3><span class="bar-area">Fremantle</span></div>
+          <p>Waterfront deck with Swan River views. Craft beers, good pub food. Best spot in Freo for afternoon sun.</p>
+          <p class="bar-address">📍 1 Riverside Dr, Fremantle</p>
+          <div class="bar-tags"><span class="tag tag-beer">Craft Beer</span><span class="tag tag-rooftop">Waterfront</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="live-music" data-area="fremantle">
+          <div class="bar-header"><h3>The National Hotel</h3><span class="bar-area">Fremantle</span></div>
+          <p>Live music Friday and Saturday nights. Solid cocktail list, cold pints, massive beer garden.</p>
+          <p class="bar-address">📍 51 High St, Fremantle</p>
+          <div class="bar-tags"><span class="tag tag-live">Live Music</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="subiaco">
+          <div class="bar-header"><h3>Mundaryn's</h3><span class="bar-area">Subiaco</span></div>
+          <p>18 taps, all quality. Local favourite. Good pub food, trivia Tuesdays, sports on the big screen.</p>
+          <p class="bar-address">📍 285 Rokeby Rd, Subiaco</p>
+          <div class="bar-tags"><span class="tag tag-beer">18 Taps</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="cocktails wine" data-area="subiaco">
+          <div class="bar-header"><h3>The Shelf</h3><span class="bar-area">Subiaco</span></div>
+          <p>Intimate cocktail bar with a well-curated wine list. Dim lighting, great date-night energy.</p>
+          <p class="bar-address">📍 2/297 Rokeby Rd, Subiaco</p>
+          <div class="bar-tags"><span class="tag tag-cocktail">Cocktails</span><span class="tag tag-wine">Wine</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer free-entry" data-area="northbridge">
+          <div class="bar-header"><h3>Northbridge Brewing Co.</h3><span class="bar-area">Northbridge</span></div>
+          <p>Solid all-rounder with its own brews. Big space, rooftop area, sports screens. Free entry always.</p>
+          <p class="bar-address">📍 65 Aberdeen St, Northbridge</p>
+          <div class="bar-tags"><span class="tag tag-beer">Brewery</span><span class="tag tag-free-entry">Free Entry</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="northbridge">
+          <div class="bar-header"><h3>Frisco Pub</h3><span class="bar-area">Northbridge</span></div>
+          <p>Craft tap selection that changes regularly. One of the best courtyards in Perth. Kitchen open till late.</p>
+          <p class="bar-address">📍 161 Brisbane St, Northbridge</p>
+          <div class="bar-tags"><span class="tag tag-beer">Craft Beer</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="mounts-bay">
+          <div class="bar-header"><h3>Helly's</h3><span class="bar-area">Mounts Bay</span></div>
+          <p>Perth institution. Cheap pints, late bar (2am), no-frills. The dive bar energy is the appeal.</p>
+          <p class="bar-address">📍 44 Mews Rd, Perth</p>
+          <div class="bar-tags"><span class="tag tag-beer">Late Bar</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="rooftop live-music" data-area="mounts-bay">
+          <div class="bar-header"><h3>Groucho's Bar</h3><span class="bar-area">Mounts Bay</span></div>
+          <p>River-facing terrace with live music Friday and Saturday. Cocktails and wine list. Best harbour views.</p>
+          <p class="bar-address">📍 44 Mews Rd, Perth</p>
+          <div class="bar-tags"><span class="tag tag-rooftop">Rooftop</span><span class="tag tag-live">Live Music</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="craft-beer" data-area="subiaco">
+          <div class="bar-header"><h3>Evilcy Brewing</h3><span class="bar-area">Subiaco</span></div>
+          <p>Local microbrewery with tasters so you can try everything. Clean IPAs, interesting sours.</p>
+          <p class="bar-address">📍 11C Aberdeen St, Subiaco</p>
+          <div class="bar-tags"><span class="tag tag-beer">Brewery</span></div>
+        </div>
+
+        <div class="bar-item" data-tags="cocktails wine rooftop" data-area="fremantle">
+          <div class="bar-header"><h3>Gypsy Temptation</h3><span class="bar-area">Fremantle</span></div>
+          <p>Espresso bar by day, cocktail bar by night. Beautiful space, interesting drinks menu.</p>
+          <p class="bar-address">📍 76 Pakenham St, Fremantle</p>
+          <div class="bar-tags"><span class="tag tag-cocktail">Cocktails</span><span class="tag tag-rooftop">Rooftop</span><span class="tag tag-wine">Wine</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+const filters = document.querySelectorAll('.filter');
+const bars = document.querySelectorAll('.bar-item');
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    bars.forEach(bar => {
+      const tags = bar.dataset.tags || '';
+      const area = bar.dataset.area || '';
+      bar.style.display = (f === 'all' || tags.includes(f) || area.includes(f)) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+<style>
+.page-header { background: var(--surface); padding: 4rem 2rem 3rem; text-align: center; }
+.page-header h1 { font-size: 3.5rem; color: white; margin-bottom: 0.5rem; }
+.page-header p { color: var(--text-dim); }
+.filters { padding: 1.5rem 0; background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 60px; z-index: 90; }
+.filter-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; padding: 0 2rem; }
+.filter-tags.areas { margin-top: 0.7rem; }
+.filter { background: var(--card); border: 1px solid var(--border); color: var(--text-dim); padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+.filter.active, .filter:hover { background: var(--neon-pink); border-color: var(--neon-pink); color: white; }
+.bars-section { padding: 3rem 0 5rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.bars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
+.bar-item { background: var(--card); border-radius: 10px; padding: 1.5rem; border: 1px solid var(--border); transition: border-color 0.2s; }
+.bar-item:hover { border-color: var(--neon-pink); }
+.bar-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
+.bar-header h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: white; text-transform: uppercase; letter-spacing: 0.04em; }
+.bar-area { font-size: 0.72rem; color: var(--neon-cyan); text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; margin-left: 0.5rem; }
+.bar-item p { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 0.5rem; }
+.bar-address { font-size: 0.78rem !important; color: var(--neon-cyan) !important; }
+.bar-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.8rem; }
+</style>

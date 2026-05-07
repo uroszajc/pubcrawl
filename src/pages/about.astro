@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="About PubCrawl Perth — who we are and how we curate our routes.">
+  <section class="page-header">
+    <h1>About</h1>
+    <p>Built for Perth drinkers, by Perth drinkers.</p>
+  </section>
+
+  <section class="about-content">
+    <div class="container">
+      <div class="about-text">
+        <h2>What Is PubCrawl Perth?</h2>
+        <p>PubCrawl Perth exists because going out in Perth shouldn't require a research committee. We've walked every route, tried every stop, and put together crawls that actually hit good bars — no filler, no tourist traps.</p>
+        <p>The bar directory is growing. Every bar in here has been vetted by someone on our team or recommended by a local who knows their stuff.</p>
+
+        <h2>How We Pick Bars</h2>
+        <p>We look for places with: good drinks, decent atmosphere, and no attitude. We care about free entry, good vibes, and whether a place is worth coming back to.</p>
+
+        <h2>Submit a Bar</h2>
+        <p>Know a spot that should be on the list? Drop us a message and we'll check it out.</p>
+
+        <h2>Responsible Crawling</h2>
+        <p>Eat before you go. Pace yourself. Drink water between stops. Book ahead for rooftop bars on weekends. And if you're not Ubering home, you're doing it wrong.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.page-header { background: var(--surface); padding: 4rem 2rem 3rem; text-align: center; }
+.page-header h1 { font-size: 3.5rem; color: white; margin-bottom: 0.5rem; }
+.page-header p { color: var(--text-dim); }
+.about-content { padding: 4rem 0; }
+.container { max-width: 700px; margin: 0 auto; padding: 0 2rem; }
+.about-text h2 { font-size: 1.8rem; color: white; margin: 2.5rem 0 1rem; }
+.about-text h2:first-child { margin-top: 0; }
+.about-text p { margin-bottom: 1rem; color: var(--text-dim); font-size: 1rem; line-height: 1.8; }
+</style>
